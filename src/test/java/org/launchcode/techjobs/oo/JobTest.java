@@ -17,7 +17,7 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        Job job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
+        final Job job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
 
 
         assertTrue(job3 instanceof Job);
@@ -31,6 +31,14 @@ public class JobTest {
         assertEquals(String.valueOf(job3.getLocation()), "Desert", "Location.value generator test.");
         assertEquals(String.valueOf(job3.getPositionType()), "Quality control", "PositionType.value generator test.");
         assertEquals(String.valueOf(job3.getCoreCompetency()), "Persistence", "CoreCompetency.value generator test.");
+    }
+
+    @Test
+    public void testJobsForEquality() {
+        final Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
+        final Job job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
+        assertEquals(job5,job4);
+
     }
 
 }
