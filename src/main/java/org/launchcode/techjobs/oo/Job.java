@@ -97,15 +97,9 @@ public class Job {
         return id;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Job{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", employer=" + employer +
-//                ", location=" + location +
-//                ", positionType=" + positionType +
-//                ", coreCompetency=" + coreCompetency +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        String nL = System.lineSeparator();
+        return nL + "testString" + nL;
+    }
 }

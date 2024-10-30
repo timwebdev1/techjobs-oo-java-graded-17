@@ -43,11 +43,14 @@ public class JobTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
+        String msg = "Blank new lines precede and follow return.";
         String nL = System.lineSeparator();
-        String testString = "testString";
-        String expected = nL + testString + nL;
-        String actual = toString();
-        assertEquals(actual,expected);
+
+        Job job6 = new Job();
+
+        String expected = nL + "testString" + nL;
+        String actual = job6.toString();
+        assertEquals(expected, actual, msg);
 
     }
 
