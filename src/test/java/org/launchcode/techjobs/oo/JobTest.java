@@ -41,4 +41,14 @@ public class JobTest {
 
     }
 
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        String nL = System.lineSeparator();
+        String testString = "testString";
+        String expected = nL + testString + nL;
+        String actual = toString();
+        assertEquals(actual,expected);
+
+    }
+
 }
