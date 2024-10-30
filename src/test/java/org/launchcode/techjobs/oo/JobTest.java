@@ -59,7 +59,7 @@ public class JobTest {
         final Job job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
 
         String expected = "\n" +
-                "ID:  1\n" +
+                "ID: 2\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +

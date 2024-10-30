@@ -100,6 +100,13 @@ public class Job {
     @Override
     public String toString() {
         String nL = System.lineSeparator();
-        return nL + "testString" + nL;
+        return nL +
+                "ID: " + Job.nextId + nL +
+                "Name: " + Job.this.name + nL +
+                "Employer: " + Job.this.employer + nL +
+                "Location: " + Job.this.location + nL +
+                "Position Type: " + Job.this.positionType + nL +
+                "Core Competency: " + Job.this.coreCompetency + nL;
+
     }
 }
