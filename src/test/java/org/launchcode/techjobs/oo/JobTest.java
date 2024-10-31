@@ -2,6 +2,7 @@ package org.launchcode.techjobs.oo;
 
 import org.junit.Test;
 
+import static java.lang.String.valueOf;
 import static org.testng.Assert.*;
 
 
@@ -26,11 +27,11 @@ public class JobTest {
         assertTrue(job3.getPositionType() instanceof PositionType);
         assertTrue(job3.getCoreCompetency() instanceof CoreCompetency);
 
-        assertEquals(String.valueOf(job3.getName()), "Product tester", "name.value generator test.");
-        assertEquals(String.valueOf(job3.getEmployer()),"ACME","Employer.value generator test.");
-        assertEquals(String.valueOf(job3.getLocation()), "Desert", "Location.value generator test.");
-        assertEquals(String.valueOf(job3.getPositionType()), "Quality control", "PositionType.value generator test.");
-        assertEquals(String.valueOf(job3.getCoreCompetency()), "Persistence", "CoreCompetency.value generator test.");
+        assertEquals(valueOf(job3.getName()), "Product tester", "name.value generator test.");
+        assertEquals(valueOf(job3.getEmployer()),"ACME","Employer.value generator test.");
+        assertEquals(valueOf(job3.getLocation()), "Desert", "Location.value generator test.");
+        assertEquals(valueOf(job3.getPositionType()), "Quality control", "PositionType.value generator test.");
+        assertEquals(valueOf(job3.getCoreCompetency()), "Persistence", "CoreCompetency.value generator test.");
     }
 
     @Test
@@ -43,13 +44,19 @@ public class JobTest {
 
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
-        String msg = "Blank new lines precede and follow return.";
-        String nL = System.lineSeparator();
-        Job job6 = new Job();
+        String msg1 = "Blank new line precede return.";
+        String msg2 = "Blank new line concludes return.";
 
-        String expected = nL + "testString" + nL;
-        String actual = job6.toString();
-        assertEquals(expected, actual, msg);
+        String n = System.lineSeparator();
+        Job job6 = new Job();
+        int finalIndex = job6.toString().length() - 1;
+
+        String expected = n;
+        String actual = valueOf(job6.toString().charAt(0));
+        String actualLast = valueOf(job6.toString().charAt(finalIndex));
+
+        assertEquals(expected, actual, msg1);
+        assertEquals(expected, actualLast, msg2);
 
     }
 
