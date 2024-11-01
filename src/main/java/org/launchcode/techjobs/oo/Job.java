@@ -102,11 +102,15 @@ public class Job {
         String nL = System.lineSeparator();
         return nL +
                 "ID: " + Job.nextId + nL +
-                "Name: " + Job.this.name + nL +
-                "Employer: " + Job.this.employer + nL +
-                "Location: " + Job.this.location + nL +
-                "Position Type: " + Job.this.positionType + nL +
-                "Core Competency: " + Job.this.coreCompetency + nL;
+                "Name: " + (isEmpty(name) ? "Data not available" : name) + nL +
+                "Employer: " + (isEmpty(String.valueOf(employer)) ? "Data not available" : employer) + nL +
+                "Location: " + (isEmpty(String.valueOf(location)) ? "Data not available" : location) + nL +
+                "Position Type: " + (isEmpty(String.valueOf(positionType)) ? "Data not available" : positionType) + nL +
+                "Core Competency: " + (isEmpty(String.valueOf(coreCompetency)) ? "Data not available" : coreCompetency) + nL;
 
+    }
+
+    private boolean isEmpty(String value) {
+        return value == null || value.isEmpty();
     }
 }
