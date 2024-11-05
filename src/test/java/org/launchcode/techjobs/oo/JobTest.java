@@ -82,7 +82,7 @@ public class JobTest {
     public void testToStringHandlesEmptyField() {
         String msg = "Prints 'Data not available' when null";
 
-        final Job job8 = new Job("Product tester", new Employer(), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
+        final Job job8 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
         String expected = "\n" +
                 "ID: 2\n" +
                 "Name: Product tester\n" +
