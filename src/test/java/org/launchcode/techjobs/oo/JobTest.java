@@ -38,7 +38,7 @@ public class JobTest {
     public void testJobsForEquality() {
         final Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
         final Job job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
-        assertEquals(job5,job4);
+        assertFalse(job5.equals(job4));
 
     }
 
@@ -66,7 +66,7 @@ public class JobTest {
         final Job job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
 
         String expected = "\n" +
-                "ID: 1\n" +
+                "ID: " + job7.getId() + "\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -84,7 +84,7 @@ public class JobTest {
 
         final Job job8 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
         String expected = "\n" +
-                "ID: 1\n" +
+                "ID: " + job8.getId() + "\n" +
                 "Name: Product tester\n" +
                 "Employer: Data not available\n" +
                 "Location: Desert\n" +
