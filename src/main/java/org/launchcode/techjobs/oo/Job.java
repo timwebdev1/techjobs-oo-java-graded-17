@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Job {
 
     private int id;
-    private static int nextId = 1;
+    public static int nextId = 1;
 
     private String name;
     private Employer employer;
@@ -101,7 +101,7 @@ public class Job {
     public String toString() {
         String nL = System.lineSeparator();
         return nL +
-                "ID: " + Job.nextId + nL +
+                "ID: " + this.id + nL +
                 "Name: " + (isEmpty(name) ? "Data not available" : name) + nL +
                 "Employer: " + (isEmpty(String.valueOf(employer)) ? "Data not available" : employer) + nL +
                 "Location: " + (isEmpty(String.valueOf(location)) ? "Data not available" : location) + nL +

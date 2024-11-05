@@ -66,7 +66,7 @@ public class JobTest {
         final Job job7 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
 
         String expected = "\n" +
-                "ID: 2\n" +
+                "ID: 1\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -84,7 +84,7 @@ public class JobTest {
 
         final Job job8 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence") );
         String expected = "\n" +
-                "ID: 2\n" +
+                "ID: 1\n" +
                 "Name: Product tester\n" +
                 "Employer: Data not available\n" +
                 "Location: Desert\n" +
